@@ -98,7 +98,7 @@ stages:
       vmImage: 'ubuntu-16.04'
     environment: test
     variables:
-    - group: 'Release'
+    - group: Release
     strategy:
       runOnce:
         deploy:
@@ -111,3 +111,4 @@ stages:
               azureSubscription: 'Tailspin - Space Game'
               appName: '$(WebAppNameTest)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+              
